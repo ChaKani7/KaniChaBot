@@ -31,7 +31,7 @@ intents.members = True
 bot = commands.Bot(command_prefix='^', intents = intents)
 bot.remove_command("help")
 
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="[Google API File Location]"
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="[Google API File PATH]"
 
 client = texttospeech.TextToSpeechClient()
 
@@ -62,7 +62,7 @@ async def my_background_task():
             await channel_t[key].send("BOT DISCONNECT 完了（自動）")
             await voice_client.disconnect()
             del(voice[key])
-            print(removeAllFile('[LOCATION]\TTS'))
+            print(removeAllFile('[PATH]\TTS'))
 
 @my_background_task.before_loop
 async def before_my_task():
@@ -255,13 +255,13 @@ async def dis(ctx):
     voice_client = ctx.message.guild.voice_client
     if not voice_client:
         await ctx.send("BOTがこのサーバーのボイスチャンネルに入ってません！")
-        print(removeAllFile('[Location]\TTS'))
+        print(removeAllFile('[PATH]\TTS'))
         return None
 
     await ctx.send("BOT DISCONNECT 完了")
     await voice_client.disconnect()
     del(voice[guild_id])
-    print(removeAllFile('[Location]\TTS'))
+    print(removeAllFile('[PATH]\TTS'))
 
 @bot.command()
 async def avatar(ctx, *, avamember : discord.Member=None):
@@ -357,12 +357,12 @@ async def on_message(message):
 
                         N = random.randrange(0,99999999999)
 
-                        with open('[Location]\TTS\{}.mp3'.format(N), 'wb') as out:
+                        with open('[PATH]\TTS\{}.mp3'.format(N), 'wb') as out:
                             out.write(response.audio_content)
 
                         guild = message.author.guild
                         voice_client: discord.VoiceClient = discord.utils.get(bot.voice_clients, guild=guild)
-                        audio_source = discord.FFmpegPCMAudio('[Location]\TTS\{}.mp3'.format(N))
+                        audio_source = discord.FFmpegPCMAudio('[PATH]\TTS\{}.mp3'.format(N))
 
                         while voice_client.is_playing():
                             await asyncio.sleep(1)
@@ -383,12 +383,12 @@ async def on_message(message):
 
                         N = random.randrange(0, 99999999999)
 
-                        with open('[Location]\TTS\{}.mp3'.format(N), 'wb') as out:
+                        with open('[PATH]\TTS\{}.mp3'.format(N), 'wb') as out:
                             out.write(response.audio_content)
 
                         guild = message.author.guild
                         voice_client: discord.VoiceClient = discord.utils.get(bot.voice_clients, guild=guild)
-                        audio_source = discord.FFmpegPCMAudio('[Location]\TTS\{}.mp3'.format(N))
+                        audio_source = discord.FFmpegPCMAudio('[PATH]\TTS\{}.mp3'.format(N))
 
                         while voice_client.is_playing():
                             await asyncio.sleep(1)
@@ -409,12 +409,12 @@ async def on_message(message):
 
                         N = random.randrange(0, 99999999999)
 
-                        with open('[Location]\TTS\{}.mp3'.format(N), 'wb') as out:
+                        with open('[PATH]\TTS\{}.mp3'.format(N), 'wb') as out:
                             out.write(response.audio_content)
 
                         guild = message.author.guild
                         voice_client: discord.VoiceClient = discord.utils.get(bot.voice_clients, guild=guild)
-                        audio_source = discord.FFmpegPCMAudio('[Location]\TTS\{}.mp3'.format(N))
+                        audio_source = discord.FFmpegPCMAudio('[PATH]\TTS\{}.mp3'.format(N))
 
                         while voice_client.is_playing():
                             await asyncio.sleep(1)
