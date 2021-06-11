@@ -360,4 +360,4 @@ async def help_jp(ctx):
     embed.set_thumbnail(url="https://i.imgur.com/v7FHQp4.png")
     await ctx.channel.send(embed=embed)
 
-bot.run('Nzg4NjA4NDkxODcwMjI0Mzg0.X9l-5A.8m0AacEZauEuAVmp3Ki_Bfn_KCY')
+bot.run('[Discord Bot Token]')
