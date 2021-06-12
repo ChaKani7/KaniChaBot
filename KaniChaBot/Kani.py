@@ -1,3 +1,12 @@
+# Discord.py Rewrite
+
+# API List
+# Naver Papago(Free), Naver Language Detection(Free),
+# Google Text-to-Speech(Free)
+
+# Hosting
+# vultr.com / 1024MB HIGH FREQUENCY
+
 import discord
 from discord.ext import commands
 
@@ -26,6 +35,7 @@ chnl = {}
 
 voice = {}
 
+# Print guild list and set bot's status
 @bot.event
 async def on_ready():
     print('다음으로 로그인합니다: ')
@@ -39,6 +49,7 @@ async def on_ready():
     game = discord.Game(f'^help | {len(bot.guilds)} servers')
     await bot.change_presence(status=discord.Status.online, activity=game)
 
+# Join author's voice channel
 @bot.command(name="join")
 async def join(ctx):
     global chnl
@@ -64,6 +75,7 @@ async def join(ctx):
         await ctx.send("ボイスチャンネルに入った状態でこのコマンドを入力してください！")
         return None
 
+# Delete all mp3 files in the TTS folder when the command 'dis' is entered
 def removeAllFile(filePath):
     if os.path.exists(filePath):
         for file in os.scandir(filePath):
@@ -72,6 +84,7 @@ def removeAllFile(filePath):
     else:
         return 'Directory Not Found'
 
+# Leave voice channel
 @bot.command(name="dis")
 async def dis(ctx):
     global voice
@@ -88,6 +101,7 @@ async def dis(ctx):
     del(voice[guild_id])
     print(removeAllFile('[PATH]\TTS'))
 
+# Show profile picture of a user who has been mentioned
 @bot.command()
 async def avatar(ctx, *, avamember : discord.Member=None):
     userAvatarUrl = avamember.avatar_url
@@ -117,7 +131,7 @@ async def on_message(message):
             for i in range(len(txt)):
                 if txt[i] == '\n':
                     txt[i] = ' '
-
+        
             if txt[0] != '*' and txt[0] != '^' and txt[0] != '~':
                 txt = ''.join(txt)
 
@@ -268,6 +282,7 @@ async def on_message(message):
 
     await bot.process_commands(message)
 
+# Translate Korean to Japanese
 async def translate_ko_to_ja(message, ID):
     encText = urllib.parse.quote(message)
     data = "source=ko&target=ja&text=" + encText
@@ -288,6 +303,7 @@ async def translate_ko_to_ja(message, ID):
     else:
         print("Error Code:" + rescode)
 
+# Translate Japanese to Korean
 async def translate_ja_to_ko(message, ID):
     encText = urllib.parse.quote(message)
     data = "source=ja&target=ko&text=" + encText
@@ -308,6 +324,7 @@ async def translate_ja_to_ko(message, ID):
     else:
         print("Error Code:" + rescode)
 
+# Translate Others to Korean
 async def translate_etc_to_ko(message, ID, lang):
     encText = urllib.parse.quote(message)
     data = f"source={lang}&target=ja&text=" + encText
