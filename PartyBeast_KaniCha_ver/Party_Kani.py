@@ -1,10 +1,6 @@
 import discord
 import discord.guild
 from discord.ext import commands
-from discord.ext import tasks
-from discord.utils import get
-import asyncio
-from datetime import datetime, timedelta
 import os
 
 bot = commands.Bot(command_prefix='&')
