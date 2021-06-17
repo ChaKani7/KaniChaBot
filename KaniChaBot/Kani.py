@@ -71,7 +71,8 @@ async def join(ctx):
             await ctx.send("BOT入場 - **{0}**".format(channel))
             chnl[guild_id] = ctx.channel.id
             voice[guild_id] = ctx.guild.voice_client
-    except:
+    except Exception as e:
+        print('Error!', e)
         await ctx.send("ボイスチャンネルに入った状態でこのコマンドを入力してください！")
         return None
 
