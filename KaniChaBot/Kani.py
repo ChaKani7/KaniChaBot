@@ -7,6 +7,11 @@
 # Hosting
 # vultr.com / 1024MB HIGH FREQUENCY
 
+# BOT 招待リンク | BOT 초대 링크
+# 1 https://discord.com/oauth2/authorize?client_id=783369247060656169&permissions=8&scope=bot
+# 2 https://discord.com/oauth2/authorize?client_id=783237963609276416&permissions=8&scope=bot
+# 3 https://discord.com/oauth2/authorize?client_id=847840100225646662&permissions=8&scope=bot
+
 import discord
 from discord.ext import commands
 
