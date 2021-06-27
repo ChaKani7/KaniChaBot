@@ -1,3 +1,6 @@
+# BOT 招待リンク | BOT 초대 링크
+# https://discord.com/oauth2/authorize?client_id=788608491870224384&permissions=8&scope=bot
+
 import discord
 import discord.guild
 from discord.ext import commands
