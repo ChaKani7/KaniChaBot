@@ -32,7 +32,7 @@
 * [PREFIX]dis ( Disconnect from voice channel )   
 * [PREFIX]avatar ( Show user's avatar )   
    
-### Additional Feature ( Only KaniChaBot 1 )
+### Additional Features ( Only KaniChaBot 1 )
 #### Translation
 * Type special symbol _ at the beginning of text channel name
 * EX) _Translation-Channel
