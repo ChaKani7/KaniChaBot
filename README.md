@@ -39,7 +39,7 @@
 * 10,000 characters per day limited
 
 ## PartyBeast_KaniCha_ver   
-* https://discord.com/oauth2/authorize?client_id=788608491870224384&permissions=8&scope=bot   
+* https://discord.com/oauth2/authorize?client_id=847915195291402243&permissions=8&scope=bot   
 
 ### COMMANDS   
 * &start_system ( Initial setting )   
