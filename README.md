@@ -34,7 +34,7 @@
    
 ### Additional Feature ( Only KaniChaBot 1 )
 #### Translation
-* Type special symbol _ at the beginning of Text channel name
+* Type special symbol _ at the beginning of text channel name
 * EX) _Translation-Channel
 * 10,000 characters per day limited
 
