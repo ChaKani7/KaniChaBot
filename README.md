@@ -5,9 +5,11 @@
 
 ## KaniChaBot 1, 2, 3
 * 韓国語と日本語を同時に読み上げてくれる日韓サーバー向け**TTS機能**   
-* 韓国語<->日本語　**翻訳機能** ( KaniChaBot 1 限定 )    
+* 韓国語<->日本語　**翻訳機能** ( KaniChaBot 1 限定 ) 
+* PCの人たちと一緒にYouTubeの動画が見れる機能（ KaniChaBot 1 限定 ）      
 * 한국어와 일본어를 동시에 읽어주는 한일서버용 **TTS 기능**   
 * 한국어 <-> 일본어 **번역 기능** ( KaniChaBot 1 한정 )   
+* PC로 접속해있는 사람들과 같이 유튜브 영상을 볼 수 있는 기능 ( KaniChaBot 1 한정 )   
 
 ## PartyBeast_KaniCha_ver
 * 自動VC作成機能 ( PartyBeast 機能 )     
@@ -37,6 +39,9 @@
 * Type special symbol _ at the beginning of text channel name
 * EX) _Translation-Channel
 * 10,000 characters per day limited
+#### YouTube Together
+* Enter the command 「 ^ytogether 」 and click the link sent by the bot
+* EX) ^ytogether
 
 ## PartyBeast_KaniCha_ver   
 * https://discord.com/oauth2/authorize?client_id=847915195291402243&permissions=8&scope=bot   
